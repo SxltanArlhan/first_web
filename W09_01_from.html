@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From</title>
+</head>
+<body>
+  <h1>HTml Form</h3>
+  <h3> Input Element</h2>
+  <p>An <span style="color: red;">input element</span> can be displayed in many ways, depending on the <span style="color: red;">type</span> attribute.</p>
+
+
+  <form action="" method="">
+    <fieldset style="background-color: rgb(215, 215, 215);">
+      <legend>Text Firld</legend>
+      <label for="fname"><span style="color: red;">*</span> First Name</label>
+      <input type="text" placeholder="กรุณากรอกชื่อ" required id="fname" name="fname"><br><br>
+
+      <label for="lname"><span style="color: red;">*</span> Last Name</label>
+      <input type="text" placeholder="กรุณากรอกนามสกุล" required id="lname" name="lname"><br><br>
+
+      <label for="email">Email</label>
+      <input type="email" placeholder="กรุณากรอกอีเมล" id="email" name="email"><br><br>
+      
+      <Label for="age"> Age</Label>
+      <input type="number" required name="age" id="age" min="0" max="120"><br><br>
+
+      <Label for="age"> Age Readonly</Label>
+      <input type="number" required name="age" id="age" value="66" readonly><br><br>
+
+      <Label for="date"> Birthday</Label>
+      <input type="date" required name="date" id="date"><br><br>
+
+      <label for="url">Website</label>
+      <input type="url"><br><br>
+
+
+      <input type="submit" value="ตกลง">
+      <input type="reset" value="ยกเลิก">
+
+    </fieldset>
+
+    <fieldset style="background-color: rgb(149, 255, 236);">
+        <legend>Login</legend>
+        <form action=""></form>
+        <input type="text" placeholder="กรุณากรอก E-mail" required id="usname" name="usname"><br><br>
+        <input type="password" placeholder="กรุณากรอก Password" required id="password" name="password"><br><br>
+        <input type="submit" value="SIGN IN">
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Redio Button</legend>
+      <form action="">
+        <label>Gender : </label>
+        <input type="radio" value="male" id="male" name="gender">
+        <label for="male">ผู้ชาย</label>
+        <input type="radio" value="female" id="female" name="gender">
+        <label for="female">ผู้หญิง</label><br><br>
+
+        <button type="submit">OK</button>
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Check Box</legend>
+      <form action="">
+        <p>เลือกภาษาที่ชอบ</p>
+        <input type="checkbox" value="HTML" id="html" name="laguage1">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" value="CSS" id="css" name="laguage2">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" value="JavaScript" id="JavaScript" name="laguage3">
+        <label for="JavaScript">JavaScript</label><br><br>
+
+        <button type="submit">ยืนยัน</button>
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Select.....Opstion</legend>
+      <form action="">
+        <label for="province">Province</label>
+        <select name="province" id="province">
+          <option value="bangkok">กรุงเทพ</option>
+          <option value="nakhon pathom">นครปฐม</option>
+          <option value="songkla">สงขลา</option>
+        </select>
+      </form>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>Text Area</legend>
+      <form action="">
+        <label for="address">Address</label><br>
+        <textarea name="address" id="address" cols="50" rows="5"></textarea><br>
+        <input type="submit" name="ส่ง">
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Upload file</legend>
+      <form action="">
+        <label for="">ไฟล์แนบ :</label>
+        <input type="file" name="attach">
+
+        <label for="">เลือกสี : </label>
+        <input type="color"><br><br>    
+        
+        <button type="button" onclick="alert('Hello world')"> Click Me!</button>
+      </form>
+    </fieldset>
+
+  </form>
+  <br>
+
+
+  <a href="index.html">Back to home</a>
+  
+  
+  
+</body>
+</html>
