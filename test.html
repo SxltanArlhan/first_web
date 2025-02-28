@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+        }
+        .header, .footer {
+            background: #ccc;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .section {
+            background: #ddd;
+            margin: 10px 0;
+            padding: 20px;
+        }
+        .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-block {
+            width: 70%;
+            background: #bbb;
+            padding: 20px;
+        }
+        .image-box {
+            width: 25%;
+            height: 100px;
+            background: #999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            display: block;
+            width: 100px;
+            background: #777;
+            padding: 10px;
+            margin: 10px auto;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">ส่วนหัวเว็บไซต์</div>
+    <div class="container">
+        <div class="section box">
+            <div class="text-block">ข้อความและเนื้อหา</div>
+            <div class="image-box">รูปภาพ</div>
+        </div>
+        <div class="button">ปุ่ม</div>
+        <div class="section"><table border="1">
+                    <tr>
+                      <th>รหัสวิชา</th>
+                      <th>ชื่อวิชา</th>
+                      <th>เกรด</th>
+                    </tr>
+                    <tr>
+                      <td>7201103</td>
+                      <td>หลักการเขียนโปรแกรมคอมพิวเตอร์</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>7201401</td>
+                        <td>โปรแกรมสำเร็จรูปมัลติมีเดีย</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: center;">GPA:4.00</td>
+                    </tr></div>
+        <div class="box">
+            <div class="text-block" style="width: 100%;">รายละเอียดเพิ่มเติม</div>
+        </div>
+        <div class="button" style="width: 150px;">ปุ่มเพิ่มเติม</div>
+    </div>
+    <div class="footer">หมายเหตุ</div>
+</body>
+</html>
