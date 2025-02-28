@@ -5,6 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Responsive From Figma Design</title>
     <link rel="stylesheet" href="css/stwebponsive.css">
+    <style>
+        :root {
+            --primary-color: rgb(0, 38, 255);
+            --secondary-color: rgb(132, 0, 255);
+            --secondary-color2: rgb(139, 160, 255);
+            --background-color: white;
+            --text-color-normal: black;
+            --box-shadow: #000 0px 2px 10px;
+            --base-white-color: white;
+        }
+        .full-screen-menu {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px){
+            
+            header {
+                flex-direction: column;
+                padding: 10px 10px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .header-button {
+                display: none;
+            }
+            .header-container {
+                .ham-icon {
+                    display: block;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+            }
+            
+
+            .hero {
+                flex-direction: column;
+
+                .left-side, .right-side {
+                    width: 100%;
+                }
+            }
+
+            .solutions-content {
+                flex-direction: column;
+                .item {
+                    width: 100%;
+                }
+            }
+
+            .hero2 {
+                flex-direction: column;
+                .left-side, .right-side {
+                    width: 100%;
+                }
+            }
+            .hero3 {
+                flex-direction: column;
+                .left-side, .right-side {
+                    width: 100%;
+                }
+                
+            }
+            .discover-content {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .footer-container {
+                flex-direction: column;
+                .footer-right {
+                    margin-top: 20px;
+                }
+            }
+
+            .full-screen-menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9); /* พื้นหลังสีดำโปร่งแสง */
+                color: white;
+                text-align: center;
+                padding-top: 50px;
+                z-index: 999;
+            }
+
+            .full-screen-menu ul {
+                list-style: none;
+                padding-top: 50px;
+            }
+
+            .full-screen-menu ul li {
+                margin: 20px 0;
+            }
+
+            .full-screen-menu ul li a {
+                font-size: 20px;
+                color: white;
+                text-decoration: none;
+            }
+
+            .full-screen-menu ul li a:hover {
+                color: var(--secondary-color);
+            }
+
+            /* ปุ่มปิดเมนู */
+            .close-btn {
+                font-size: 32px;
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                cursor: pointer;
+            }
+
+
+            
+        }
+
+
+    </style>
 </head>
 <body>
     <header>
@@ -27,8 +151,25 @@
                 <button class="btn-signup">Sign up</button> 
                 <button class="btn-login">Login</button>
             </div>
+
+            <div class="ham-icon" onclick="openMenu()">&#9776</div>
         </div>
     </header>
+
+    <!-- Full-Screen Menu -->
+    <div class="full-screen-menu" id="fullScreenMenu">
+        <div class="close-btn" onclick="closeMenu()">✖</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Sign up</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="W12_01_Login.html">Logout</a></li>
+        </ul>
+    </div>
+
     <div class="container">
         <section class="hero">
             <div class="left-side">
@@ -64,7 +205,7 @@
         </section>
         <section class="hero2">
             <div class="left-side">
-                <h1>YCustomization and integration</h1>
+                <h1>Customization and integration</h1>
                 <p>Our SaaS solutions are flexible and can be tailored to your specific business requirements. We understand that each organization is unique, and we are committed to delivering software that fits your needs like a glove.</p>
                 <button class="btn">Learn more</button>
             </div>
@@ -74,12 +215,13 @@
         </section>
         <section class="hero3">
             <div class="left-side">
-                <img src="img/Chatbot helping solve users_ problems.png" alt="">
-            </div>
-            <div class="right-side">
                 <h1>Dedicated support</h1>
                 <p>Zephtor provides ongoing support and training to ensure you maximize the value of our software. Our experts are here to assist you at every step of your digital transformation journey.</p>
                 <button class="btn">Learn more</button>
+                
+            </div>
+            <div class="right-side">
+                <img src="img/Chatbot helping solve users' problems.png" alt="">
             </div>
         </section>
         <section class="discover">
@@ -126,9 +268,58 @@
         </section>
     </div>
     <footer>
-
-
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="img/Osu Lazer.png" alt="">
+                <h3>Zephtor</h3>
+                <p>Your digital transformation partner.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-item">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-item">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms of service</a></li>
+                            <li><a href="#">Cookie policy</a></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-item">
+                        <h3>Stay Connected</h3>
+                        <ul>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                </div>
+            </div>
+            
+        </div>
     </footer>
+
+    <script>
+        function openMenu() {
+            document.getElementById("fullScreenMenu").style.display = "block";
+        }
+        
+        function closeMenu() {
+            document.getElementById("fullScreenMenu").style.display = "none";
+        }
+        
+    </script>
     <a href="index.html" class="back-home">Back to Home</a>
 </body>
 </html>
