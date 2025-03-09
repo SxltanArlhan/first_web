@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Intro</title>
+    <link rel="stylesheet" href="css/bootstp/bootstrap.min.css">
+
+    <style>
+        .container {
+                background-color: rgb(130, 53, 230);
+                //text-align: center;
+                padding: 5px;
+                margin-top: 10px;
+                //color: rgb(0, 107, 27);
+            ul {
+                text-align: left;
+            }
+        }
+        .container-fluid {
+            background-color: rgb(197, 161, 230);
+            text-align: center;
+                padding: 5px;
+                margin-top: 10px;
+                color: rgb(0, 107, 27);
+            ul {
+                text-align: left;
+            }
+            
+        }
+        .back-home {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ff0000;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        z-index: 1000;
+        }
+
+        .back-home:hover {
+        background-color: #670000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bootstrap Intro</h1>
+    <hr>
+    <h2>การเปรียบเทียบ .container VS .container-fluid</h2>
+
+    <!--.container-->
+    <div class="container">
+        <h1>Container</h1>
+        <p>กำหนดค่า property เพิ่มเติมในการจัดการ style โดยไม่ใช้ class จาก bootstrap</p>
+        <ul>
+            <li>background-color</li>
+            <li>ext-align</li>
+            <li>padding</li>
+            <li>margin-top</li>
+            <li>color</li>
+        </ul>
+    </div>
+
+
+    <!--.container-fluid-->
+    <div class="container-fluid">
+        <h1>Container-fluid</h1>
+        <p>กำหนดค่า property เพิ่มเติมในการจัดการ style โดยไม่ใช้ class จาก bootstrap</p>
+        <ul>
+            <li>background-color</li>
+            <li>ext-align</li>
+            <li>padding</li>
+            <li>margin-top</li>
+            <li>color</li>
+        </ul>
+        
+    </div>
+
+    <h1>ใช้งานคำสั่งจาก Bootstrap</h1>
+    <div class="container bg-dark text-warning text-center p-5 mt-5">
+        <h1>Container</h1>
+        <p>กำหนดค่า property เพิ่มเติมในการจัดการ style โดยไม่ใช้ class จาก bootstrap</p>
+        <ul>
+            <li>background-color => bg-drak</li>
+            <li>text-align => text-center</li>
+            <li>padding => p-5</li>
+            <li>margin-top => mt-5</li>
+            <li>color => text-warning</li>
+        </ul>
+    </div>
+
+    <div class="container-fluid bg-dark text-light text-center p-2 mt-4">
+        <h1>Grid Basic</h1>
+        <p>แบ่งคอลัม</p>
+    </div>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-3 bg-danger">Sunday</div>
+            <div class="col-3 bg-warning">Monday</div>
+            <div class="col-3 bg-secondary">Tueday</div>
+            <div class="col-3 bg-success">Wednesday</div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg=danger text-light text-center p-2 mt-4">
+        <h1>Grid & Card & Button</h1>
+    </div>
+
+    <!--split 3 colum with card-->
+    <div class="container">
+        <div class="row text">
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h3>Colum 1</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h3>Colum 2</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h3>Colum 3</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--colum-->
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h3>Colum 1</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                        <button type="button" class="btn btn-primary">Go Somewhere</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h3>Colum 2</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                        <button type="button" class="btn btn-outline-success">Go Somewhere</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h3>Colum 3</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                        <div class="d-grid gap-3">
+                            <button type="button" class="btn btn-danger ">Go Somewhere 1</button>
+                            <button type="button" class="btn btn-outline-primary">Go Somewhere 2</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/rabbit3.jpg" alt="Card image">
+                        <h3>Colum 1</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                        <button type="button" class="btn btn-primary">Go Somewhere</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/rabbit3.jpg" alt="Card image">
+                        <h3>Colum 2</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                        <button type="button" class="btn btn-outline-success">Go Somewhere</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img class="card-img-top" src="img/rabbit3.jpg" alt="Card image">
+                        <h3>Colum 3</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, vero?</p>
+                        <div class="d-grid gap-3">
+                            <button type="button" class="btn btn-danger ">Go Somewhere 1</button>
+                            <button type="button" class="btn btn-outline-primary">Go Somewhere 2</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-home">Back to Home</a>
+
+    
+
+
+    <script src="css/javac/bootstrap.bundle.min.js"></script>
+</body>
+</html>
